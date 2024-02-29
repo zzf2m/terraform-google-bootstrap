@@ -18,14 +18,14 @@ module "im_workspace" {
   source = "../../modules/im_cloudbuild_workspace"
 
   project_id    = var.project_id
-  deployment_id = "im-example-github-deployment"
+  deployment_id = "im-multiple-deployment-example"
 
   tf_repo_type           = "GITHUB"
-  im_deployment_repo_uri = "https://github.com/im-goose/infra-manager-git-example.git"
+  im_deployment_repo_uri = "https://github.com/josephdt12/infra-manager-git-example.git"
   im_deployment_ref      = "main"
   im_tf_variables        = "project_id=${var.project_id}"
   infra_manager_sa_roles = ["roles/compute.networkAdmin"]
 
-  github_app_installation_id   = "47590865"
+  github_app_installation_id   = "47236181"
   github_personal_access_token = var.im_github_pat
 }
