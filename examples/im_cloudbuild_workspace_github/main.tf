@@ -34,7 +34,7 @@ module "bucket" {
   source  = "terraform-google-modules/cloud-storage/google//modules/simple_bucket"
   version = "~> 5.0"
 
-  name       = "im-${var.project_id}-example-bucket"
+  name       = "im-${var.project_id}-example-bucket-suffix"
   project_id = var.project_id
   location   = "us"
 
