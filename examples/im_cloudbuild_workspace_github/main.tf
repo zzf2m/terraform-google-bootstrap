@@ -25,6 +25,7 @@ module "im_workspace" {
   im_deployment_repo_dir = "examples/im_cloudbuild_workspace_github"
   im_deployment_ref      = "single-deployment"
   infra_manager_sa       = "projects/${var.project_id}/serviceAccounts/prod-byosa@josephdthomas-prod.iam.gserviceaccount.com"
+  im_tf_variables        = "project_id=${var.project_id},im_github_pat_secret=${var.im_github_pat_secret}"
 
   github_app_installation_id = "47236181"
   github_pat_secret          = var.im_github_pat_secret
