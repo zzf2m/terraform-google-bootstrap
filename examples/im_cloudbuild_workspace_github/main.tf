@@ -24,7 +24,7 @@ module "im_workspace" {
   im_deployment_repo_uri = "https://github.com/josephdt12/terraform-google-bootstrap.git"
   im_deployment_repo_dir = "examples/im_cloudbuild_workspace_github"
   im_deployment_ref      = "bugbash-example"
-  infra_manager_sa_roles = ["roles/compute.networkAdmin"]
+  infra_manager_sa       = "projects/${var.project_id}/serviceAccounts/prod-byosa@josephdthomas-prod.iam.gserviceaccount.com"
 
   github_app_installation_id   = "47236181"
   github_personal_access_token = var.im_github_pat_secret
