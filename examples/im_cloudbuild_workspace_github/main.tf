@@ -27,7 +27,7 @@ module "im_workspace" {
   infra_manager_sa       = "projects/${var.project_id}/serviceAccounts/prod-byosa@josephdthomas-prod.iam.gserviceaccount.com"
 
   github_app_installation_id = "47236181"
-  github_pat_secret          = "github-bugbash-secret"
+  github_pat_secret          = var.im_github_pat_secret
 }
 
 module "bucket" {
