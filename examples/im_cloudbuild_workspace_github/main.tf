@@ -18,16 +18,16 @@ module "im_workspace" {
   source = "../../modules/im_cloudbuild_workspace"
 
   project_id    = var.project_id
-  deployment_id = "im-example-github-deployment"
+  deployment_id = "im-example-single-deployment"
 
   tf_repo_type           = "GITHUB"
   im_deployment_repo_uri = "https://github.com/josephdt12/terraform-google-bootstrap.git"
   im_deployment_repo_dir = "examples/im_cloudbuild_workspace_github"
-  im_deployment_ref      = "bugbash-example"
+  im_deployment_ref      = "single-deployment"
   infra_manager_sa       = "projects/${var.project_id}/serviceAccounts/prod-byosa@josephdthomas-prod.iam.gserviceaccount.com"
 
-  github_app_installation_id   = "47236181"
-  github_personal_access_token = var.im_github_pat_secret
+  github_app_installation_id = "47236181"
+  github_pat_secret          = "github-bugbash-secret"
 }
 
 module "bucket" {
