@@ -24,3 +24,8 @@ variable "im_github_pat" {
   type        = string
   sensitive   = true
 }
+
+variable "cb_app_id" {
+  description = "The ID of the installed cloud build app."
+  type        = string
+}

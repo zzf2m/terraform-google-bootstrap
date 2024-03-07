@@ -26,6 +26,6 @@ module "im_workspace" {
   im_tf_variables        = "project_id=${var.project_id}"
   infra_manager_sa_roles = ["roles/compute.networkAdmin"]
 
-  github_app_installation_id   = "47236181"
+  github_app_installation_id   = var.cb_app_id
   github_personal_access_token = var.im_github_pat
 }
